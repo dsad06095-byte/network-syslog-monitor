@@ -1,0 +1,10 @@
+email:
+  enabled: false
+  smtp_server: smtp.example.com
+  smtp_port: 587
+  from: monitor@example.com
+  to: ops@example.com
+
+wecom:
+  enabled: false
+  webhook_url: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx

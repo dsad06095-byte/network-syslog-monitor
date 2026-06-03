@@ -1,0 +1,20 @@
+rules:
+  - name: "接口频繁抖动"
+    pattern: "(?i).*line protocol.*(down|up).*"
+    count_threshold: 3
+    time_window: 60
+    severity: "warning"
+    
+  - name: "设备重启"
+    pattern: "(?i).*system returned to rom.*|.*reloaded.*"
+    severity: "critical"
+    
+  - name: "环路检测"
+    pattern: "(?i).*loop.*detected.*|.*stp.*blocking.*"
+    severity: "critical"
+    
+  - name: "登录失败"
+    pattern: "(?i).*authentication failed.*|.*login invalid.*"
+    count_threshold: 5
+    time_window: 300
+    severity: "warning"
